@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport"
 				content="width=device-width, initial-scale=1.0">
 	<meta name="description"
-				content="Gulp pack for easy html/php markup development">
+				content="">
 	<meta name="keywords"
 				content="">
 	<link rel="shortcut icon"
@@ -22,14 +22,48 @@
 				href="css/libs.min.css">
 	<link rel="stylesheet"
 				href="css/style.min.css">
-	<title>Easy-webdev-startpack v3.0</title>
+	<title>JustLavka</title>
 </head>
 
 
 <body>
-	<header class="header"></header>
+	<header class="header flex --align-center">
+    <div class="container flex --just-space --align-center">
+        <div class="header__descr">Автоматизированная платформа цифровых магазинов в Telegram</div>
+        <div class="header__logo-wrap flex --just-center --align-center">
+            <div class="header__logo --svg__logo"></div>
+        </div>
+        <div class="header__links flex --just-center">
+            <a href="#" class="header__link-demo --svg__header-icon-after">ДЕМО-магазин</a>
+            <a href="#" class="header__link-create">Создать интернет-магазин</a>
+        </div>
+    </div>
+</header>
 
-	<main class="main"></main>
+
+	<section class="promo">
+    <div class="container">
+        <div class="promo__top-title --svg__promo-title"></div>
+        <div class="promo__wrapper flex --just-space">
+            <div class="promo__logo-wrap flex --just-center --align-center">
+                <div class="promo__logo --svg__logo"></div>
+            </div>
+            <div class="promo__info">
+                <h1 class="promo__title">Создайте свой успешный магазин в Telegram с <span>Just</span>Lavka</h1>
+                <div class="promo__descr">
+                    Платформа для быстрого и удобного создания магазина в Telegram. <br> 
+                    Продавайте свои цифровые товары с комфортом!
+                </div>
+                <div class="promo__button">
+                    <button class="flax --just-center --align-center ">Создать интернет-магазин</button>
+                </div>
+            </div>
+            <div class="promo__plane --svg__plane"></div>
+        </div>
+    </div>
+
+</section>
+	
 	<footer class="footer"></footer>
 
 	<script src="js/libs.min.js"></script>
