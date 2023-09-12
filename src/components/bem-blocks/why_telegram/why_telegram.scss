@@ -1,0 +1,23 @@
+.why-telegram{
+    padding-top: 7.3rem;
+    padding-bottom: 11rem;
+    min-height: 108rem;
+    // overflow: hidden;
+    background: linear-gradient(180deg, rgba(167, 226, 255, 0.00) 0%, #A7E2FF 100%),
+    url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='836' fill='none'%3E%3Cpath d='M1981.99 1.77c2.15 114.762-173.09 333.147-452.54 424.509-362.54 118.532-734.626-36.37-1036.896-14.831-347.165 24.739-533.11 270.828-584.458 422.945' stroke='%23A7E2FF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' stroke-dasharray='5 5'/%3E%3C/svg%3E")
+    0 50% no-repeat / contain;
+    .why-telegram__title{
+        font-size: 64px;
+        font-weight: 400;
+        line-height: 110%;
+        span{
+            font-weight: 700;
+        }
+    }
+    .why-telegram__wrapper{
+        margin-top: 7rem;
+        width: 78rem;
+        gap: 3.7rem;
+        flex-wrap: wrap;
+    }
+}
