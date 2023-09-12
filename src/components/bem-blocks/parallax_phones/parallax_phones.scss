@@ -1,11 +1,66 @@
-.parallax_phones{
+.parallax-phones{
     width: 169.4rem;
     height: 267.5rem;
+    position: absolute;
+    left: 9%;
+    top: -71%;
     transform: rotate(30deg);
-    .parallax_phones__phone{
-        background: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='206' height='1080' fill='none'%3E%3Cpath d='M150-17.5C88 0 1.5 122 1.5 275c0 198.5 148.5 357.5 190 510.5C239.164 961.225 139.667 1093 67 1143' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' stroke-dasharray='5 5'/%3E%3C/svg%3E")
-        100% 100% no-repeat / contain;
+    z-index: 0;
+    .parallax-phones__wrapper{
+        width: 85rem;
+        height: 211.1rem;
+        margin-right: 0;
+        margin-left: auto;
+        flex-wrap: wrap;
+        gap: 5rem 5.42rem ;
+        .parallax-phones__phone:nth-child(3){
+            margin-top: 44.5rem;
+        }
+    }
+    .parallax-phones__phone{
+        @include bg;
         width: 39.7rem;
         height: 80.8rem;
+        padding: 2rem;
+        .parallax-phones__screen{
+            width: 100%;
+            height: 100%;
+            border-radius: 5rem;
+            .parallax-phones__front-cam{
+                @include bg;
+                width: 1.82rem;
+                height: 1.82rem;
+                margin-top: 1.75rem;
+            }
+        }
+    }
+    .parallax-phones__phone:nth-child(1){
+        .parallax-phones__screen{
+            background: url(../img/parallax_phones/phone1_bg.webp) 100% 100% no-repeat / cover;
+        }
+    }
+    .parallax-phones__phone:nth-child(2){
+        .parallax-phones__screen{
+            background: url(../img/parallax_phones/phone2_bg.webp) 100% 100% no-repeat / cover;
+        }
+    }
+    .parallax-phones__phone:nth-child(3){
+        .parallax-phones__screen{
+            background: url(../img/parallax_phones/phone3_bg.webp) 100% 100% no-repeat / cover;
+        }
+    }
+    .parallax-phones__phone:nth-child(4){
+        .parallax-phones__screen{
+            background: url(../img/parallax_phones/phone4_bg.webp) 100% 100% no-repeat / cover;
+        }
+    }
+
+    .parallax-phones__phone-5{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        .parallax-phones__screen{
+            background: url(../img/parallax_phones/phone5_bg.webp) 100% 100% no-repeat / cover !important; 
+        }
     }
 }

@@ -1,0 +1,101 @@
+.create-shop{
+    padding-top: 10.3rem;
+    height: 72rem;
+    overflow: hidden;
+    .create-shop__text{
+        .create-shop__title{
+            margin-top: 4rem;
+        }
+        .create-shop__list{
+            margin-top: 5rem;
+            gap: 2.4rem;
+            li{
+                font-size: 3.2rem;
+                line-height: 110%;
+                font-weight: 300;
+                width: 100%;
+                position: relative;
+                list-style-type: none;
+                display: flex;
+                align-items: center;
+                a{
+                    color: #212121;
+                }
+            }
+            li::before{                
+                color: #fff;
+                font-family: "AzoftSans", sans-serif;
+                font-size: 4rem;
+                font-weight: 700;
+                line-height: 110%;
+                width: 6rem;
+                height: 6rem;
+                margin-right: 4rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #A7E2FF;
+                transition: 0.5s ease;
+            }
+            li:hover{
+                font-weight: 400;
+            }
+            li:hover::before{
+                background: $accent_color;
+            }
+            li:nth-child(1)::before{
+                content: 'I';
+            }
+            li:nth-child(2)::before{
+                content: 'II';
+            }
+            li:nth-child(3)::before{
+                content: 'III';
+            }
+            li:nth-child(4)::before{
+                content: 'IV';
+            }
+            li::after{
+                @include bg;
+                display: inline-block;
+                width: 28rem;
+                height: 6.4rem;
+                position: absolute;
+                left: 58rem;
+                top: 3rem;
+            }
+            .create-shop__active{
+                font-weight: 400;
+            }
+            .create-shop__active::before{
+                background: $accent_color;
+            }
+        }
+    }
+    .create-shop__pic-frame{
+        @include bg;
+        width: 39.2rem;
+        height: 83.2rem;
+        padding: 1.6rem 1.6rem 9.3rem 1.6rem;
+        .create-shop__pic-screen{
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 100% 45%;
+            width: 100%;
+            height: 100%;
+            border-radius: 4rem 4rem 0 0;
+        }
+        .create-shop__pic-screen-slide1{
+            background-image: url(../img/create_shop/create_shop__slide1.webp);
+        }
+        .create-shop__pic-screen-slide2{
+            background-image: url(../img/create_shop/create_shop__slide2.webp);
+        }
+        .create-shop__pic-screen-slide3{
+            background-image: url(../img/create_shop/create_shop__slide3.webp);
+        }
+        .create-shop__pic-screen-slide4{
+            background-image: url(../img/create_shop/create_shop__slide4.webp);
+        }
+    }
+}
