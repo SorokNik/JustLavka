@@ -1,6 +1,9 @@
 button{
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
     border-radius: .2rem;
     color: $accent-color;
@@ -10,7 +13,7 @@ button{
     cursor: pointer;
 }
 
-.accent-button{
+button.accent-button{
     color: #fff;
     background: $accent-color;
     border: .1rem solid #CA1E5C;

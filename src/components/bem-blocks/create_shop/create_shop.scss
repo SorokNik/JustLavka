@@ -55,7 +55,13 @@
             li:nth-child(4)::before{
                 content: 'IV';
             }
-            li::after{
+            .create-shop__active{
+                font-weight: 400;
+            }
+            .create-shop__active::before{
+                background: $accent_color;
+            }
+            .create-shop__active::after{
                 @include bg;
                 display: inline-block;
                 width: 28rem;
@@ -63,12 +69,6 @@
                 position: absolute;
                 left: 58rem;
                 top: 3rem;
-            }
-            .create-shop__active{
-                font-weight: 400;
-            }
-            .create-shop__active::before{
-                background: $accent_color;
             }
         }
     }
@@ -84,17 +84,18 @@
             width: 100%;
             height: 100%;
             border-radius: 4rem 4rem 0 0;
+            transition: 0.5s ease;
         }
-        .create-shop__pic-screen-slide1{
+        .create-shop__pic-screen:nth-child(1){
             background-image: url(../img/create_shop/create_shop__slide1.webp);
         }
-        .create-shop__pic-screen-slide2{
+        .create-shop__pic-screen:nth-child(2){
             background-image: url(../img/create_shop/create_shop__slide2.webp);
         }
-        .create-shop__pic-screen-slide3{
+        .create-shop__pic-screen:nth-child(3){
             background-image: url(../img/create_shop/create_shop__slide3.webp);
         }
-        .create-shop__pic-screen-slide4{
+        .create-shop__pic-screen:nth-child(4){
             background-image: url(../img/create_shop/create_shop__slide4.webp);
         }
     }
