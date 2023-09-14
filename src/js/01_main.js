@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
 //==========ФУНКЦИЯ ДЛЯ СМЕЩЕНИЯ ЭЛЕМЕНТА ПРИ СКРОЛЛЕ ДОКУМЕНТА (ПАРАЛАКС)==========
 
-  const addParallax = (relocatableElem, defaultTop, defaultLeft, stepTop, stepLeft, rotateDeg, scrollBack) => {
+  const addParallax = (relocatableElem, defaultTop, defaultLeft, stepTop, stepLeft, rotateDeg, scrollBack, maxTop) => {
 
     let oldScrollTopPosition = 0;
 
@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
         const scrollTopPosition = document.documentElement.scrollTop;
 
-        if(oldScrollTopPosition < scrollTopPosition) {
+        if(oldScrollTopPosition < scrollTopPosition && defaultTop > maxTop) {
             defaultTop  = defaultTop - stepTop;
             defaultLeft = defaultLeft + stepLeft;
         }
 
-        if(oldScrollTopPosition > scrollTopPosition) {
+        if(oldScrollTopPosition > scrollTopPosition && defaultTop) {
             defaultTop  = defaultTop + stepTop;
             defaultLeft = defaultLeft - stepLeft;
 
@@ -75,10 +75,27 @@ const changeSlide = (switchesList, slidesList, activeClass, switchActiveClass) =
 
 
 
-    addParallax(plane,0, 0, 1, 2, 0, false);
-    addParallax(promoTracer,0, 0, 1, 2, 0, false);
-    addParallax(parallaxPhones, 0, 0, 0.3, 0.15, 30, true);
+    addParallax(plane,0, 0, 1, 2, 0, false, -47);
+    addParallax(promoTracer,0, 0, 1, 2, 0, false, -47);
+    addParallax(parallaxPhones, 0, 0, 0.3, 0.15, 30, true, -49.5);
 
     changeSlide(createShopSwitchesList, createShopSlides, 'show', 'create-shop__active');
     changeSlide(advantagesSwitchesList, advantagesSlides, 'show', 'advantages__switch-active');
+
+//==========РАБОТА В ВЕРСИИ ДЛЯ ПЛАНШЕТОВ========== 
+
+console.log(window.innerWidth < 1199);
+
+if(window.innerWidth < 1199) {
+    promoTracer.classList.remove('--svg__promo-small-curve');
+    promoTracer.classList.add('--svg__promo-small-curve_tablet');
+}
+
+window.addEventListener('resize', () => {
+    if(window.innerWidth < 1199) {
+        promoTracer.classList.remove('--svg__promo-small-curve');
+        promoTracer.classList.add('--svg__promo-small-curve_tablet');
+    }
 })
+
+});

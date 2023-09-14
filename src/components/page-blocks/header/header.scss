@@ -43,5 +43,8 @@
             margin-left: 1.4rem;
             @include bg;
         }
+        .header__link-create{
+            font-weight: 700;
+        }
     }
 }

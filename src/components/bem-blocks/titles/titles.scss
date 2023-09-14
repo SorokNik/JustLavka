@@ -12,3 +12,9 @@
 .title-white{
     color: #fff;
 }
+
+@media(max-width: 1199px) {
+    .title, .title-white{
+        font-size: 4.8rem;
+    }
+}
