@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', ()=> {
-    
 
 //==========ФУНКЦИЯ ДЛЯ СМЕЩЕНИЯ ЭЛЕМЕНТА ПРИ СКРОЛЛЕ ДОКУМЕНТА (ПАРАЛАКС)==========
 
@@ -78,7 +77,7 @@ const changeSlide = (switchesList, slidesList, activeClass, switchActiveClass) =
 
     addParallax(plane,0, 0, 1, 2, 0, false);
     addParallax(promoTracer,0, 0, 1, 2, 0, false);
-    addParallax(parallaxPhones, 0, 0, 0.5, 0.3, 30, true);
+    addParallax(parallaxPhones, 0, 0, 0.3, 0.15, 30, true);
 
     changeSlide(createShopSwitchesList, createShopSlides, 'show', 'create-shop__active');
     changeSlide(advantagesSwitchesList, advantagesSlides, 'show', 'advantages__switch-active');

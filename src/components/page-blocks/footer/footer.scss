@@ -1,0 +1,110 @@
+.footer{ 
+    padding-top: 7.2rem;
+    background: #002940;
+    .footer__text{
+        margin-top: 3.5rem;
+        .footer__descr{
+            margin-top: 0.9rem;
+            width: 46rem;
+            font-size: 2.2rem;
+            font-weight: 400;
+            color: #fff;
+            line-height: 110%;
+        }
+        .footer__contacts{
+            height: 7.6rem;
+            gap: 2.1rem;
+            position: relative;
+            .footer__button{
+                width: 46rem;
+                border-radius: 0.2rem;
+                background: #A7E2FF;
+                color: #187BB2;
+            }
+            .footer__or{
+                color: #A7E2FF;
+                font-size: 1rem;
+                font-weight: 500;
+                line-height: 110%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.8rem;
+            }
+            .footer__or::before, 
+            .footer__or::after{
+                content: '';
+                display: inline-block;
+                background: #4096C1;
+                width: 1rem;
+                height: 0.1rem;
+            }
+            .footer__social-wrapper{
+                width: 10.5rem;
+                height: 4.5rem;
+                .footer__social{
+                    width: 4.5rem;
+                    height: 4.5rem;
+                    padding: 1rem;
+                    border-radius: 0.2rem;
+                    border: #A7E2FF 0.1rem solid;
+                    .footer__social-logo{
+                        @include bg;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .footer__plane-wrapper{
+                width: 39.2rem;
+                height: 25.4rem;
+                position: absolute;
+                top: -25rem;
+                left: 17rem;
+                .footer__plane{
+                    @include bg;
+                    width: 22rem;
+                    height: 22.7rem;
+                    position: absolute;
+                    top: -1rem;
+                    right: -2rem;
+                }
+                .footer__plane-tracer{
+                    @include bg;
+                    width: 25.9rem;
+                    height: 16.5rem;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+    .footer__bottom{
+        margin-top: 9.4rem;
+        height: 7.7rem;
+        position: relative;
+        .footer__delimeter{
+            @include bg ($size: "cover");
+            width: 100%;
+            height: 0.2rem;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .footer__terms{
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 110%;
+        }
+        .footer__copyright{
+            color: #58C7FF;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 110%;
+        }
+    }
+}
