@@ -45,6 +45,9 @@
         }
         .header__link-create{
             font-weight: 700;
+            br{
+                display: none;
+            }
         }
     }
 }

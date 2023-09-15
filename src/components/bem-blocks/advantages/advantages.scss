@@ -47,7 +47,6 @@
             }
             .advantages__slide{
                 border-radius: 0.5rem;
-                // background: linear-gradient(180deg, rgba(126, 187, 226, 0.00) 0%, rgba(118, 184, 226, 0.67) 78.29%, #75B7E2 96.15%), url(../img/advantages/advantages-slide1_bg.webp), lightgray -26.498px -434.916px / 105.469% 220.209% no-repeat;
                 width: 100%;
                 height: 100%;
                 padding-top: 14.7rem;
@@ -62,7 +61,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    gap: 23px;
+                    gap: 2.3rem;
                 }
                 .advantages__slide-title::before{
                     @include bg;

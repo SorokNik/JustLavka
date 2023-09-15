@@ -62,6 +62,16 @@ const changeSlide = (switchesList, slidesList, activeClass, switchActiveClass) =
     });
 }
 
+//==========ФУНКЦИЯ ДЛЯ ДОБАВЛЕНИЯ/УДАЛЕНИЯ КЛАССОВ В ЗАВИСИМОСТИ ОТ ШИРИНЫ ОКНА==========
+
+const changeClassAfterResize = (screenWidth, removedClasses, addedClass) => {
+
+    if(window.innerWidth < screenWidth) {
+        removedClasses.forEach(item => item.classList.remove(item));
+        promoTracer.classList.add(addedClass);
+    }
+};
+
 //==========ОБЪЯВЛЕНИЕ ПЕРЕМЕНЫХ И ВЫЗОВ ФУНКЦИЙ==========
 
   const promo = document.querySelector('.promo'),
@@ -86,16 +96,26 @@ const changeSlide = (switchesList, slidesList, activeClass, switchActiveClass) =
 
 console.log(window.innerWidth < 1199);
 
-if(window.innerWidth < 1199) {
-    promoTracer.classList.remove('--svg__promo-small-curve');
-    promoTracer.classList.add('--svg__promo-small-curve_tablet');
-}
+// if(window.innerWidth < 1199) {
+//     promoTracer.classList.remove('--svg__promo-small-curve');
+//     promoTracer.classList.add('--svg__promo-small-curve_tablet');
+// }
+
+// window.addEventListener('resize', () => {
+//     if(window.innerWidth < 1199) {
+//         promoTracer.classList.remove('--svg__promo-small-curve');
+//         promoTracer.classList.add('--svg__promo-small-curve_tablet');
+//     }
+// })
+
+changeClassAfterResize(1200, ['--svg__promo-small-curve'], '--svg__promo-small-curve_tablet');
+changeClassAfterResize(575, ['--svg__promo-small-curve_tablet', '--svg__promo-small-curve'], '--svg__promo-small-curve_mobile');
+
 
 window.addEventListener('resize', () => {
-    if(window.innerWidth < 1199) {
-        promoTracer.classList.remove('--svg__promo-small-curve');
-        promoTracer.classList.add('--svg__promo-small-curve_tablet');
-    }
-})
+    
+    changeClassAfterResize(1200, ['--svg__promo-small-curve'], '--svg__promo-small-curve_tablet');
+    changeClassAfterResize(575, ['--svg__promo-small-curve_tablet', '--svg__promo-small-curve'], '--svg__promo-small-curve_mobile');
+});
 
 });

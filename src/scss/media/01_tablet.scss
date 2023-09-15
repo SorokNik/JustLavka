@@ -74,6 +74,9 @@
         .why-telegram__wrapper{
             margin-top: 5.7rem;
             width: 77rem;
+            .card{
+                pointer-events: none; 
+            }
         }
         .parallax-phones{
             width: 131.4rem;
@@ -115,7 +118,7 @@
 
     .advantages{
         padding-bottom: 8.8rem;
-        .adwantages__wrapper{
+        .advantages__wrapper{
             margin-top: 2rem;
             .advantages__switches{
                 width: 22.8rem;
@@ -132,15 +135,90 @@
                     position: absolute;
                     top: 50%;
                     transform: translateY(-50%);
-                    left: 34.17rem;
+                    left: 21.35rem;
+                }
+            }
+            .advantages__slides-wrapper{
+                margin-top: 3rem;
+                width: 50rem;
+                height: 39.4rem;
+                .advantages__button{
+                    width: 40rem;
+                    height: 6.5rem;
+                }
+                .advantages__slide{
+                    padding-top: 13.5rem;
+                    .advantages__slide-title{
+                        gap: 1.9rem;
+                        margin: 0 auto;
+                        width: 46.5rem;
+                    }
+                    .advantages__slide-title::before{
+                        width: 6rem;
+                        height: 6rem;
+                    }
+                    .advantages__slide-descr{
+                        margin-top: 3.6rem;
+                        width: 40rem;
+                        font-size: 1.6rem;
+                    }
                 }
             }
         }
     }
 
 
-    .free-access, 
+    .free-access{
+        padding-top: 9.2rem;
+        min-height: 58.3rem;
+        .container{
+            gap: 1.7rem;
+            width: 86.5rem;
+            margin-left: 1.5rem;
+            .free-access__pic{
+                width: 38.8rem;
+                height: 50rem;
+            }
+            .free-access__text{
+                padding-top: 1.3rem;
+                width: 46rem;
+                .free-access__descr{
+                    margin-top: 3.9rem;
+                    font-size: 2rem;
+                }
+                .free-access__button:nth-child(3){
+                    margin-top: 3.9rem;
+                }
+                .free-access__button:nth-child(4){
+                    margin-top: 2.7rem;
+                }
+            }
+        }
+    }
+
     .footer{
-        display: none;
+        padding-top: 4.8rem;
+        .footer__text{
+            margin-top: 2rem;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 2.8rem;
+            .footer__descr{
+                width: 44.3rem;
+                margin-top: 0;
+                font-size: 1.8rem;
+            }
+            .footer__contacts{
+                .footer__button{
+                    width: 56rem;
+                }
+                .footer__plane-wrapper{
+                    left: 39rem;
+                }
+            }
+        }
+        .footer__bottom{
+            margin-top: 8.7rem;
+        }
     }
 }

@@ -1,6 +1,11 @@
 .footer{ 
     padding-top: 7.2rem;
     background: #002940;
+    .footer__title{
+        span{
+            font-weight: 800;
+        }
+    }
     .footer__text{
         margin-top: 3.5rem;
         .footer__descr{

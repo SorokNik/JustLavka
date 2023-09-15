@@ -1,0 +1,97 @@
+@media (max-width: 575px){
+    html{
+        font-size: 2.7vw;
+    }
+
+    .container{
+        width: 34rem;
+    }
+
+    .header{
+        .container{
+            width: 34rem;
+        }
+        .header__descr{
+            display: none;
+        }
+        .header__links{
+            gap: auto;
+            justify-content: space-between;
+            width: 100%;
+            a{
+                font-size: 1.3rem;
+            }
+            .header__link-demo::after{
+                display: none;
+            }
+            .header__link-demo::before{
+                display: inline-block;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: 100% 100%;
+                width: 0.94rem;
+                height: 0.96rem;
+                margin-right: 1rem;
+            }
+            .header__link-create{
+                br{
+                    display: inline;
+                }
+            }
+        }
+    }
+
+    .promo{
+        background: url(../img/promo/promo_bg.webp) 100% 100% no-repeat / cover;
+        padding-top: 10.3rem;
+        padding-bottom: 2.3rem;
+        text-align: center;
+        .container{
+            width: 34rem;
+        }
+        .promo__top-title{
+            width: 16.5r;
+            height: 3.5rem;
+        }
+        .promo__wrapper{
+            margin-top: 2.7rem;
+            .promo__logo-wrap{
+                display: none;
+            }
+            .promo__info{
+                width: 100%;
+                .promo__title{
+                    font-size: 3.2rem;
+                }
+                .promo__descr{
+                    margin-top: 2rem;
+                    font-weight: 400;
+                }
+                .promo__button{
+                    margin-top:16rem;
+                    width: 100%;
+                }
+            }
+            .promo__plane{
+                width: 18.6rem;
+                height: 16.3rem;
+                top: 0;
+                left: 0;
+            }
+        }
+        .promo__tracer{
+            width: 25.8rem;
+            height: 16rem;
+            top: 0rem;
+            left: 0rem;
+        }
+    }
+
+    .why-telegram,
+    .create-shop,
+    .advantages,
+    .free-access,
+    .footer{
+        display: none;
+    }
+}
