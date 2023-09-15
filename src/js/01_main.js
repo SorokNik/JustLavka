@@ -62,13 +62,17 @@ const changeSlide = (switchesList, slidesList, activeClass, switchActiveClass) =
     });
 }
 
-//==========ФУНКЦИЯ ДЛЯ ДОБАВЛЕНИЯ/УДАЛЕНИЯ КЛАССОВ В ЗАВИСИМОСТИ ОТ ШИРИНЫ ОКНА==========
+//==========ФУНКЦИЯ ДЛЯ ДОБАВЛЕНИЯ/УДАЛЕНИЯ КЛАССОВ В ЗАВИСИМОСТИ ОТ ШИРИНЫ ОКНА(ПРИМЕНЯЕТСЯ ДЛЯ ПОЯВЛЕНИЯ ТРАССЕРА ЗА САМОЛЕТИКОМ)==========
 
-const changeClassAfterResize = (screenWidth, removedClasses, addedClass) => {
+const changeClassAfterResize = (screenWidth, elem, removedClasses, addedClass) => {
 
     if(window.innerWidth < screenWidth) {
-        removedClasses.forEach(item => item.classList.remove(item));
-        promoTracer.classList.add(addedClass);
+        removedClasses.forEach((item, i) => {
+            elem.classList.remove(item);
+        });
+        
+        elem.classList.add(addedClass);
+
     }
 };
 
@@ -89,33 +93,28 @@ const changeClassAfterResize = (screenWidth, removedClasses, addedClass) => {
     addParallax(promoTracer,0, 0, 1, 2, 0, false, -47);
     addParallax(parallaxPhones, 0, 0, 0.3, 0.15, 30, true, -49.5);
 
+    if(window.innerWidth < 576) {
+        addParallax(parallaxPhones, 0, 0, 0.1, 0.05, 30, true, -49.5);
+    }
+
     changeSlide(createShopSwitchesList, createShopSlides, 'show', 'create-shop__active');
     changeSlide(advantagesSwitchesList, advantagesSlides, 'show', 'advantages__switch-active');
 
-//==========РАБОТА В ВЕРСИИ ДЛЯ ПЛАНШЕТОВ========== 
-
-console.log(window.innerWidth < 1199);
-
-// if(window.innerWidth < 1199) {
-//     promoTracer.classList.remove('--svg__promo-small-curve');
-//     promoTracer.classList.add('--svg__promo-small-curve_tablet');
-// }
-
-// window.addEventListener('resize', () => {
-//     if(window.innerWidth < 1199) {
-//         promoTracer.classList.remove('--svg__promo-small-curve');
-//         promoTracer.classList.add('--svg__promo-small-curve_tablet');
-//     }
-// })
-
-changeClassAfterResize(1200, ['--svg__promo-small-curve'], '--svg__promo-small-curve_tablet');
-changeClassAfterResize(575, ['--svg__promo-small-curve_tablet', '--svg__promo-small-curve'], '--svg__promo-small-curve_mobile');
 
 
-window.addEventListener('resize', () => {
-    
-    changeClassAfterResize(1200, ['--svg__promo-small-curve'], '--svg__promo-small-curve_tablet');
-    changeClassAfterResize(575, ['--svg__promo-small-curve_tablet', '--svg__promo-small-curve'], '--svg__promo-small-curve_mobile');
-});
+    changeClassAfterResize(1200, promoTracer, ['--svg__promo-small-curve', '--svg__promo-small-curve_mobile'], '--svg__promo-small-curve_tablet');
+    changeClassAfterResize(576, promoTracer, ['--svg__promo-small-curve_tablet', '--svg__promo-small-curve'], '--svg__promo-small-curve_mobile');
+
+
+    window.addEventListener('resize', () => {
+        
+        if(window.innerWidth < 576) {
+            addParallax(parallaxPhones, 0, 0, 0.1, 0.05, 30, true, -49.5);
+        }
+
+        changeClassAfterResize(1250, promoTracer, ['--svg__promo-small-curve_tablet', '--svg__promo-small-curve_mobile'], '--svg__promo-small-curve');
+        changeClassAfterResize(1200, promoTracer, ['--svg__promo-small-curve', '--svg__promo-small-curve_mobile'], '--svg__promo-small-curve_tablet');
+        changeClassAfterResize(576, promoTracer, ['--svg__promo-small-curve_tablet', '--svg__promo-small-curve'], '--svg__promo-small-curve_mobile');
+    });
 
 });

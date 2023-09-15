@@ -75,21 +75,183 @@
             .promo__plane{
                 width: 18.6rem;
                 height: 16.3rem;
-                top: 0;
-                left: 0;
+                top: 18rem;
+                left: 15rem;
             }
         }
         .promo__tracer{
             width: 25.8rem;
             height: 16rem;
-            top: 0rem;
-            left: 0rem;
+            top: 43rem;
+            left: -2rem;
         }
     }
 
-    .why-telegram,
-    .create-shop,
-    .advantages,
+    .why-telegram{
+        padding-top: 3.3rem;
+        min-height: 169rem;
+        background: #fff;
+        .why-telegram__wrapper{
+            margin-top: 4rem;
+            width: 100%;
+            .card{
+                width: 33.8rem;
+                height: 33.8rem;
+                padding: 12.2rem 4.8rem 3.5rem 3.7rem;
+                box-shadow: 0.6rem 5.3rem 4.4rem 0rem #69C4EF;
+            }
+        }
+        .parallax-phones{
+            width: 45rem;
+            height: 90rem;
+            left: 2rem;
+            top: auto;
+            bottom: -4rem;
+            .parallax-phones__wrapper{
+                width: 100%;
+                height: 100%;
+                gap: 2rem;
+                .parallax-phones__phone:nth-child(3){
+                    margin-top: 22rem;
+                }
+            }
+            .parallax-phones__phone{
+                width: 21.6rem;
+                height: 44rem;
+                padding: 1rem;
+                box-shadow: -0.7rem 1.9rem 3.9rem 0rem rgba(88, 89, 92, 0.30);
+                border-radius: 4rem;
+                .parallax-phones__screen{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 3rem;
+                    .parallax-phones__front-cam{
+                        width: 1rem;
+                        height: 1rem;
+                        margin-top: 1rem;
+                    }
+                }
+            }
+            .parallax-phones__phone:nth-child(1){
+                .parallax-phones__screen{
+                    background: url(../img/parallax_phones/phone1_bg.webp) 100% .1rem no-repeat / cover;
+                }
+            }
+            .parallax-phones__phone:nth-child(2){
+                .parallax-phones__screen{
+                    background: url(../img/parallax_phones/phone2_bg.webp) 100% .1rem no-repeat / cover;
+                }
+            }
+            .parallax-phones__phone:nth-child(3){
+                .parallax-phones__screen{
+                    background: url(../img/parallax_phones/phone3_bg.webp) 100% .1rem no-repeat / cover;
+                }
+            }
+            .parallax-phones__phone:nth-child(4){
+                display: none;
+            }
+        
+            .parallax-phones__phone-5{
+                display: none;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                .parallax-phones__screen{
+                    background: url(../img/parallax_phones/phone5_bg.webp) 100% .1rem no-repeat / cover !important; 
+                }
+            }
+        }
+    }
+
+    .create-shop{
+        padding-top: 0.4rem;
+        min-height: 93.9rem;
+        .container{
+            flex-direction: column;
+            width: 35rem;
+            margin-left: auto;
+        }
+        .create-shop__text{
+            .create-shop__list{
+                margin-top: 3.6rem;
+                gap: 3rem;
+                li{
+                    font-size: 2rem;
+                }
+                li::before{                
+                    margin-right: 3rem;
+                    min-width: 6rem;
+                    min-height: 6rem;
+                }
+                .create-shop__active::after{
+                    display: none;
+                }
+            }
+        }
+        .create-shop__pic-frame{
+            margin-top: 4.4rem;
+        }
+    }
+
+    .advantages{
+        border-top: 1.5rem solid #fff;
+        padding-top: 3.1rem;
+        padding-bottom: 0;
+        .container{
+            width: 100%;
+        }
+        .advantages__wrapper{
+            margin-top: 5.4rem;
+            flex-direction: column;
+            align-items: center;
+            .advantages__switches{
+                width: 33.7rem;
+                gap: 1.9rem;
+                border-right: #fff 0.1rem solid;
+                .advantages__switch{
+                    width: 100%;
+                    br{
+                        display: none;
+                    }
+                }
+                .advantages__switch-active::after{
+                    width: 3.6rem;
+                    height: 3.6rem;
+                    left: auto;
+                    right: -1.8rem;
+                }
+            }
+            .advantages__slides-wrapper{
+                margin-top: 3.5rem;
+                width: 100%;
+                height: 37.5rem;
+                .advantages__button{
+                    width: 34rem;
+                    height: 7.6rem;
+                    bottom: 3.4rem;
+                }
+                .advantages__slide{
+                    padding-top: 5rem;
+                    .advantages__slide-title{
+                        gap: 2rem;
+                        margin: 0 auto;
+                        width: 34rem;
+                        font-size: 2.4rem;
+                    }
+                    .advantages__slide-title::before{
+                        min-width: 7rem;
+                        min-height: 7rem;
+                    }
+                    .advantages__slide-descr{
+                        margin-top: 3rem;
+                        width: 34rem;
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+
     .free-access,
     .footer{
         display: none;

@@ -18,3 +18,10 @@
         font-size: 4.8rem;
     }
 }
+
+@media(max-width: 575px) {
+    .title, .title-white{
+        font-size: 3.6rem;
+        text-align: center;
+    }
+}
