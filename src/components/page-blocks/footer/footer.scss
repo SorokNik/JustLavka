@@ -22,9 +22,12 @@
             position: relative;
             .footer__button{
                 width: 46rem;
+                height: 100%;
                 border-radius: 0.2rem;
-                background: #A7E2FF;
-                color: #187BB2;
+                button{
+                    background: #A7E2FF;
+                    color: #187BB2;
+                }
             }
             .footer__or{
                 color: #A7E2FF;
@@ -104,6 +107,7 @@
             font-size: 1rem;
             font-weight: 300;
             line-height: 110%;
+            text-decoration: underline;
         }
         .footer__copyright{
             color: #58C7FF;

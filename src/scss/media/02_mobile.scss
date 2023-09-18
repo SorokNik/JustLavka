@@ -314,7 +314,9 @@
                     justify-content: space-between;
                     .footer__button{
                         width: 14.7rem;
-                        font-size: 1.6rem;
+                        button{
+                            font-size: 1.6rem;
+                        }
                     }
                     .footer__plane-wrapper{
                         left: 13rem;

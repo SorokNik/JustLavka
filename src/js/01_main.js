@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
 //==========ФУНКЦИЯ ДЛЯ СМЕЩЕНИЯ ЭЛЕМЕНТА ПРИ СКРОЛЛЕ ДОКУМЕНТА (ПАРАЛАКС)==========
 
-  const addParallax = (relocatableElem, defaultTop, defaultLeft, stepTop, stepLeft, rotateDeg, scrollBack, maxTop) => {
+  const addParallax = (relocatableElem, defaultTop, defaultLeft, stepTop, stepLeft, rotateDeg, minTop, maxTop, scrollBack) => {
 
     let oldScrollTopPosition = 0;
 
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
                 defaultLeft = defaultLeft + stepLeft;
             }
     
-            if(oldScrollTopPosition > scrollTopPosition && defaultTop) {
+            if(oldScrollTopPosition > scrollTopPosition && defaultTop < minTop) {
                 defaultTop  = defaultTop + stepTop;
                 defaultLeft = defaultLeft - stepLeft;
     
@@ -94,9 +94,9 @@ const changeClassAfterResize = (screenWidth, elem, removedClasses, addedClass) =
 
 
 
-    addParallax(plane,0, 0, 0.25, 0.5, 0, false, -47);
-    addParallax(promoTracer,0, 0, 0.25, 0.5, 0, false, -47);
-    addParallax(parallaxPhones, 0, 0, 0.3, 0.15, 30, true, -49.5);
+    addParallax(plane,0, 0, 0.25, 0.5, 0, 0, -47, false);
+    addParallax(promoTracer,0, 0, 0.25, 0.5, 0, 0, -47, false);
+    addParallax(parallaxPhones, 0, 0, 0.3, 0.15, 30, 39, -49.5, true);
 
     changeSlide(createShopSwitchesList, createShopSlides, 'show', 'create-shop__active');
     changeSlide(advantagesSwitchesList, advantagesSlides, 'show', 'advantages__switch-active');
@@ -110,9 +110,9 @@ const changeClassAfterResize = (screenWidth, elem, removedClasses, addedClass) =
 
     window.addEventListener('resize', () => {
         
-        addParallax(plane,0, 0, 0.25, 0.5, 0, false, -47);
-        addParallax(promoTracer,0, 0, 0.25, 0.5, 0, false, -47);
-        addParallax(parallaxPhones, 0, 0, 0.3, 0.15, 30, true, -49.5);
+        addParallax(plane,0, 0, 0.25, 0.5, 0, 0, -47);
+        addParallax(promoTracer,0, 0, 0.25, 0.5, 0, 0, -47);
+        addParallax(parallaxPhones, 0, 0, 0.3, 0.15, 30, -19, -49.5);
 
         changeClassAfterResize(1250, promoTracer, ['--svg__promo-small-curve_tablet', '--svg__promo-small-curve_mobile'], '--svg__promo-small-curve');
         changeClassAfterResize(1200, promoTracer, ['--svg__promo-small-curve', '--svg__promo-small-curve_mobile'], '--svg__promo-small-curve_tablet');
