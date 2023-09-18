@@ -116,7 +116,7 @@ const changeClassAfterResize = (screenWidth, elem, removedClasses, addedClass) =
 
         changeClassAfterResize(1250, promoTracer, ['--svg__promo-small-curve_tablet', '--svg__promo-small-curve_mobile'], '--svg__promo-small-curve');
         changeClassAfterResize(1200, promoTracer, ['--svg__promo-small-curve', '--svg__promo-small-curve_mobile'], '--svg__promo-small-curve_tablet');
-        changeClassAfterResize(578, footerTracer, ['--svg__footer_plane-tracer_mobile'], '--svg__footer_plane-tracer'); 
+        changeClassAfterResize(1200, footerTracer, ['--svg__footer_plane-tracer_mobile'], '--svg__footer_plane-tracer'); 
         changeClassAfterResize(576, promoTracer, ['--svg__promo-small-curve_tablet', '--svg__promo-small-curve'], '--svg__promo-small-curve_mobile');
         changeClassAfterResize(576, footerTracer, ['--svg__footer_plane-tracer'], '--svg__footer_plane-tracer_mobile'); 
     });
