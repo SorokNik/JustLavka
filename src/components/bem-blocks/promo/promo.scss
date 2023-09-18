@@ -1,7 +1,6 @@
 .promo{
     background: 
-    url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='206' height='1080' fill='none'%3E%3Cpath d='M150-17.5C88 0 1.5 122 1.5 275c0 198.5 148.5 357.5 190 510.5C239.164 961.225 139.667 1093 67 1143' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' stroke-dasharray='5 5'/%3E%3C/svg%3E")
-    41.6rem 0 no-repeat / contain, 
+     
     url(../img/promo/promo_bg.webp) 100% 100% no-repeat / cover;
     padding-top: 11.6rem;
     padding-bottom: 28rem;
@@ -68,4 +67,18 @@
         left: 84rem;
         z-index: -1;
     }
+}
+
+.promo::before{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(0.9rem);
+    background: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='206' height='1080' fill='none'%3E%3Cpath d='M150-17.5C88 0 1.5 122 1.5 275c0 198.5 148.5 357.5 190 510.5C239.164 961.225 139.667 1093 67 1143' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' stroke-dasharray='5 5'/%3E%3C/svg%3E")
+    41.6rem 0 no-repeat / contain;
+    z-index: -1;
 }

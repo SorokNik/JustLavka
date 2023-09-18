@@ -10,18 +10,22 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
         const scrollTopPosition = document.documentElement.scrollTop;
 
-        if(oldScrollTopPosition < scrollTopPosition && defaultTop > maxTop) {
-            defaultTop  = defaultTop - stepTop;
-            defaultLeft = defaultLeft + stepLeft;
-        }
+        
 
-        if(oldScrollTopPosition > scrollTopPosition && defaultTop) {
-            defaultTop  = defaultTop + stepTop;
-            defaultLeft = defaultLeft - stepLeft;
-
-            if((scrollY === 0 || defaultTop < 0 || defaultLeft < 0) && !scrollBack){
-                defaultTop = 0;
-                defaultLeft = 0;
+        if(window.innerWidth > 1140){
+            if(oldScrollTopPosition < scrollTopPosition && defaultTop > maxTop) {
+                defaultTop  = defaultTop - stepTop;
+                defaultLeft = defaultLeft + stepLeft;
+            }
+    
+            if(oldScrollTopPosition > scrollTopPosition && defaultTop) {
+                defaultTop  = defaultTop + stepTop;
+                defaultLeft = defaultLeft - stepLeft;
+    
+                if((scrollY === 0 || defaultTop < 0 || defaultLeft < 0) && !scrollBack){
+                    defaultTop = 0;
+                    defaultLeft = 0;
+                }
             }
         }
         
@@ -85,17 +89,14 @@ const changeClassAfterResize = (screenWidth, elem, removedClasses, addedClass) =
           createShopSwitchesList = document.querySelectorAll('.create-shop__list li'),
           createShopSlides = document.querySelectorAll('.create-shop__pic-screen'),
           advantagesSwitchesList = document.querySelectorAll('.advantages__switch'),
-          advantagesSlides = document.querySelectorAll('.advantages__slide');
+          advantagesSlides = document.querySelectorAll('.advantages__slide'),
+          footerTracer = document.querySelector('.footer__plane-tracer');
 
 
 
-    addParallax(plane,0, 0, 1, 2, 0, false, -47);
-    addParallax(promoTracer,0, 0, 1, 2, 0, false, -47);
+    addParallax(plane,0, 0, 0.25, 0.5, 0, false, -47);
+    addParallax(promoTracer,0, 0, 0.25, 0.5, 0, false, -47);
     addParallax(parallaxPhones, 0, 0, 0.3, 0.15, 30, true, -49.5);
-
-    if(window.innerWidth < 576) {
-        addParallax(parallaxPhones, 0, 0, 0.1, 0.05, 30, true, -49.5);
-    }
 
     changeSlide(createShopSwitchesList, createShopSlides, 'show', 'create-shop__active');
     changeSlide(advantagesSwitchesList, advantagesSlides, 'show', 'advantages__switch-active');
@@ -104,17 +105,20 @@ const changeClassAfterResize = (screenWidth, elem, removedClasses, addedClass) =
 
     changeClassAfterResize(1200, promoTracer, ['--svg__promo-small-curve', '--svg__promo-small-curve_mobile'], '--svg__promo-small-curve_tablet');
     changeClassAfterResize(576, promoTracer, ['--svg__promo-small-curve_tablet', '--svg__promo-small-curve'], '--svg__promo-small-curve_mobile');
+    changeClassAfterResize(576, footerTracer, ['--svg__footer_plane-tracer'], '--svg__footer_plane-tracer_mobile');  
 
 
     window.addEventListener('resize', () => {
         
-        if(window.innerWidth < 576) {
-            addParallax(parallaxPhones, 0, 0, 0.1, 0.05, 30, true, -49.5);
-        }
+        addParallax(plane,0, 0, 0.25, 0.5, 0, false, -47);
+        addParallax(promoTracer,0, 0, 0.25, 0.5, 0, false, -47);
+        addParallax(parallaxPhones, 0, 0, 0.3, 0.15, 30, true, -49.5);
 
         changeClassAfterResize(1250, promoTracer, ['--svg__promo-small-curve_tablet', '--svg__promo-small-curve_mobile'], '--svg__promo-small-curve');
         changeClassAfterResize(1200, promoTracer, ['--svg__promo-small-curve', '--svg__promo-small-curve_mobile'], '--svg__promo-small-curve_tablet');
+        changeClassAfterResize(578, footerTracer, ['--svg__footer_plane-tracer_mobile'], '--svg__footer_plane-tracer'); 
         changeClassAfterResize(576, promoTracer, ['--svg__promo-small-curve_tablet', '--svg__promo-small-curve'], '--svg__promo-small-curve_mobile');
+        changeClassAfterResize(576, footerTracer, ['--svg__footer_plane-tracer'], '--svg__footer_plane-tracer_mobile'); 
     });
 
 });

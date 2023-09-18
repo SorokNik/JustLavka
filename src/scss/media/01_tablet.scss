@@ -10,60 +10,61 @@
     .header{
         .container{
             width: 96rem;
-        }
-        .header__descr{
-            font-size: 1.2rem;
+            .header__descr{
+                font-size: 1.2rem;
+            }
         }
     }
 
     .promo{
-        background: 
-        url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='157' height='857' fill='none'%3E%3Cpath d='M114.228-17C67.372-3.73 2 88.782 2 204.801c0 150.521 112.228 271.09 143.591 387.109 36.022 133.251-39.173 233.175-94.09 271.09' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' stroke-dasharray='5 5'/%3E%3C/svg%3E")
-        7.7rem 0 no-repeat / contain, 
-        url(../img/promo/promo_bg.webp) 100% 100% no-repeat / cover;
+        background: url(../img/promo/promo_bg.webp) 100% 100% no-repeat / cover;
         padding-top: 11.6rem;
         padding-bottom: 22.3rem;
         .container{
             width: 85.6rem;
-        }
-        .promo__wrapper{
-            margin-top: 11.6rem;
-            .promo__logo-wrap{
-                width: 15.6rem;
-                height: 15.6rem;
-                .promo__logo{
-                    width: 8.8rem;
-                    height: 8.8rem;
+            .promo__wrapper{
+                margin-top: 11.6rem;
+                .promo__logo-wrap{
+                    width: 15.6rem;
+                    height: 15.6rem;
+                    .promo__logo{
+                        width: 8.8rem;
+                        height: 8.8rem;
+                    }
+                }
+                .promo__info{
+                    width: 66rem;
+                    .promo__title{
+                        font-size: 4.8rem;
+                    }
+                    .promo__descr{
+                        margin-top: 2rem;
+                        font-size: 1.6rem;
+                    }
+                    .promo__button{
+                        margin-top: 5.3rem;
+                        width: 35.9rem;
+                        height: 7.6rem;
+                    }
+                }
+                .promo__plane{
+                    width: 28.9rem;
+                    height: 25.3rem;
+                    top: 22rem;
+                    left: 56.3rem;
                 }
             }
-            .promo__info{
-                width: 66rem;
-                .promo__title{
-                    font-size: 4.8rem;
-                }
-                .promo__descr{
-                    margin-top: 2rem;
-                    font-size: 1.6rem;
-                }
-                .promo__button{
-                    margin-top: 5.3rem;
-                    width: 35.9rem;
-                    height: 7.6rem;
-                }
+            .promo__tracer{
+                width: 39.3rem;
+                height: 25rem;
+                left: 33rem;
             }
-            .promo__plane{
-                width: 28.9rem;
-                height: 25.3rem;
-                top: 22rem;
-                left: 56.3rem;
-            }
-        }
-        .promo__tracer{
-            width: 39.3rem;
-            height: 25rem;
-            left: 33rem;
         }
     
+    }
+    .promo::before{
+        background: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='157' height='857' fill='none'%3E%3Cpath d='M114.228-17C67.372-3.73 2 88.782 2 204.801c0 150.521 112.228 271.09 143.591 387.109 36.022 133.251-39.173 233.175-94.09 271.09' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' stroke-dasharray='5 5'/%3E%3C/svg%3E")
+        7.7rem 0 no-repeat / contain;
     }
 
     .why-telegram{
@@ -90,29 +91,29 @@
         .container{
             width: 86rem;
             margin-left: 12rem;
-        }
-        .create-shop__text{
-            .create-shop__title{
-                margin-top: 0;
-            }
-            .create-shop__list{
-                margin-top: 9.6rem;
-                gap: 3.4rem;
-                li{
-                    font-size: 2rem;
+            .create-shop__text{
+                .create-shop__title{
+                    margin-top: 0;
                 }
-                .create-shop__active::after{
-                    position: absolute;
-                    left: 28rem;
-                    top: 3rem;
+                .create-shop__list{
+                    margin-top: 9.6rem;
+                    gap: 3.4rem;
+                    li{
+                        font-size: 2rem;
+                    }
+                    .create-shop__active::after{
+                        position: absolute;
+                        left: 28rem;
+                        top: 3rem;
+                    }
                 }
             }
-        }
-        .create-shop__pic-frame{
-            margin-top: 5.3rem;
-            width: 35.4rem;
-            height: 75.2rem;
-            padding: 1.6rem 1.6rem 9.3rem 1.6rem;
+            .create-shop__pic-frame{
+                margin-top: 5.3rem;
+                width: 35.4rem;
+                height: 75.2rem;
+                padding: 1.6rem 1.6rem 9.3rem 1.6rem;
+            }
         }
     }
 

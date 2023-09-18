@@ -10,32 +10,32 @@
     .header{
         .container{
             width: 34rem;
-        }
-        .header__descr{
-            display: none;
-        }
-        .header__links{
-            gap: auto;
-            justify-content: space-between;
-            width: 100%;
-            a{
-                font-size: 1.3rem;
-            }
-            .header__link-demo::after{
+            .header__descr{
                 display: none;
             }
-            .header__link-demo::before{
-                display: inline-block;
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: 100% 100%;
-                width: 0.94rem;
-                height: 0.96rem;
-                margin-right: 1rem;
-            }
-            .header__link-create{
-                br{
-                    display: inline;
+            .header__links{
+                gap: auto;
+                justify-content: space-between;
+                width: 100%;
+                a{
+                    font-size: 1.3rem;
+                }
+                .header__link-demo::after{
+                    display: none;
+                }
+                .header__link-demo::before{
+                    display: inline-block;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: 100% 100%;
+                    width: 0.94rem;
+                    height: 0.96rem;
+                    margin-right: 1rem;
+                }
+                .header__link-create{
+                    br{
+                        display: inline;
+                    }
                 }
             }
         }
@@ -48,43 +48,47 @@
         text-align: center;
         .container{
             width: 34rem;
-        }
-        .promo__top-title{
-            width: 16.5r;
-            height: 3.5rem;
-        }
-        .promo__wrapper{
-            margin-top: 2.7rem;
-            .promo__logo-wrap{
-                display: none;
+            .promo__top-title{
+                width: 16.5r;
+                height: 3.5rem;
             }
-            .promo__info{
-                width: 100%;
-                .promo__title{
-                    font-size: 3.2rem;
+            .promo__wrapper{
+                margin-top: 2.7rem;
+                .promo__logo-wrap{
+                    display: none;
                 }
-                .promo__descr{
-                    margin-top: 2rem;
-                    font-weight: 400;
-                }
-                .promo__button{
-                    margin-top:16rem;
+                .promo__info{
                     width: 100%;
+                    .promo__title{
+                        font-size: 3.2rem;
+                    }
+                    .promo__descr{
+                        margin-top: 2rem;
+                        font-weight: 400;
+                    }
+                    .promo__button{
+                        margin-top:16rem;
+                        width: 100%;
+                    }
+                }
+                .promo__plane{
+                    width: 18.6rem;
+                    height: 16.3rem;
+                    top: 18rem;
+                    left: 15rem;
                 }
             }
-            .promo__plane{
-                width: 18.6rem;
-                height: 16.3rem;
-                top: 18rem;
-                left: 15rem;
+            .promo__tracer{
+                width: 25.8rem;
+                height: 16rem;
+                top: 43rem;
+                left: -2rem;
             }
         }
-        .promo__tracer{
-            width: 25.8rem;
-            height: 16rem;
-            top: 43rem;
-            left: -2rem;
-        }
+    }
+
+    .promo::before{
+        background: none;
     }
 
     .why-telegram{
@@ -99,6 +103,7 @@
                 height: 33.8rem;
                 padding: 12.2rem 4.8rem 3.5rem 3.7rem;
                 box-shadow: 0.6rem 5.3rem 4.4rem 0rem #69C4EF;
+                box-shadow: 0.6rem 2.1rem 4.4rem 0rem #69C4EF;
             }
         }
         .parallax-phones{
@@ -170,26 +175,26 @@
             flex-direction: column;
             width: 35rem;
             margin-left: auto;
-        }
-        .create-shop__text{
-            .create-shop__list{
-                margin-top: 3.6rem;
-                gap: 3rem;
-                li{
-                    font-size: 2rem;
-                }
-                li::before{                
-                    margin-right: 3rem;
-                    min-width: 6rem;
-                    min-height: 6rem;
-                }
-                .create-shop__active::after{
-                    display: none;
+            .create-shop__text{
+                .create-shop__list{
+                    margin-top: 3.6rem;
+                    gap: 3rem;
+                    li{
+                        font-size: 2rem;
+                    }
+                    li::before{                
+                        margin-right: 3rem;
+                        min-width: 6rem;
+                        min-height: 6rem;
+                    }
+                    .create-shop__active::after{
+                        display: none;
+                    }
                 }
             }
-        }
-        .create-shop__pic-frame{
-            margin-top: 4.4rem;
+            .create-shop__pic-frame{
+                margin-top: 4.4rem;
+            }
         }
     }
 
@@ -199,61 +204,144 @@
         padding-bottom: 0;
         .container{
             width: 100%;
-        }
-        .advantages__wrapper{
-            margin-top: 5.4rem;
-            flex-direction: column;
-            align-items: center;
-            .advantages__switches{
-                width: 33.7rem;
-                gap: 1.9rem;
-                border-right: #fff 0.1rem solid;
-                .advantages__switch{
+            .advantages__wrapper{
+                margin-top: 5.4rem;
+                flex-direction: column;
+                align-items: center;
+                .advantages__switches{
+                    width: 33.7rem;
+                    gap: 1.9rem;
+                    border-right: #fff 0.1rem solid;
+                    .advantages__switch{
+                        width: 100%;
+                        br{
+                            display: none;
+                        }
+                    }
+                    .advantages__switch-active::after{
+                        width: 3.6rem;
+                        height: 3.6rem;
+                        left: auto;
+                        right: -1.8rem;
+                    }
+                }
+                .advantages__slides-wrapper{
+                    margin-top: 3.5rem;
                     width: 100%;
-                    br{
-                        display: none;
-                    }
-                }
-                .advantages__switch-active::after{
-                    width: 3.6rem;
-                    height: 3.6rem;
-                    left: auto;
-                    right: -1.8rem;
-                }
-            }
-            .advantages__slides-wrapper{
-                margin-top: 3.5rem;
-                width: 100%;
-                height: 37.5rem;
-                .advantages__button{
-                    width: 34rem;
-                    height: 7.6rem;
-                    bottom: 3.4rem;
-                }
-                .advantages__slide{
-                    padding-top: 5rem;
-                    .advantages__slide-title{
-                        gap: 2rem;
-                        margin: 0 auto;
+                    height: 37.5rem;
+                    .advantages__button{
                         width: 34rem;
-                        font-size: 2.4rem;
+                        height: 7.6rem;
+                        bottom: 3.4rem;
                     }
-                    .advantages__slide-title::before{
-                        min-width: 7rem;
-                        min-height: 7rem;
-                    }
-                    .advantages__slide-descr{
-                        margin-top: 3rem;
-                        width: 34rem;
-                        font-size: 1.6rem;
+                    .advantages__slide{
+                        padding-top: 5rem;
+                        .advantages__slide-title{
+                            gap: 2rem;
+                            margin: 0 auto;
+                            width: 34rem;
+                            font-size: 2.4rem;
+                        }
+                        .advantages__slide-title::before{
+                            min-width: 7rem;
+                            min-height: 7rem;
+                        }
+                        .advantages__slide-descr{
+                            margin-top: 3rem;
+                            width: 34rem;
+                            font-size: 1.6rem;
+                        }
                     }
                 }
             }
         }
     }
 
-    .free-access,
+    .free-access{
+        padding-top: 4rem;
+        padding-bottom: 5.8rem;
+        min-height: 102rem;
+        .container{
+            width: 34rem;
+            margin-left: auto;
+            gap: none;
+            position: relative;
+            text-align: center;
+            .free-access__pic{
+                width: 46.4rem;
+                height: 59.7rem;
+                position: absolute;
+                z-index: -1;
+                top: 18.2rem;
+                left: 1rem;
+                background-size: cover;
+                background-position-y: 4.26rem;
+            }
+            .free-access__text{
+                padding-top: 0;
+                width: 100%;
+                .free-access__descr{
+                    margin-top: 3.4rem;
+                    font-size: 1.8rem;
+                }
+                .free-access__button:nth-child(3){
+                    margin-top: 55.9rem;
+                }
+                .free-access__button:nth-child(4){
+                    margin-top: 1.7rem;
+                }
+            }
+        }
+    }
+
     .footer{
-        display: none;
+        padding-top: 3.9rem;
+        padding-bottom: 3.7rem;
+        overflow: hidden;
+        .container{
+            flex-direction: column;
+            text-align: center;
+            .footer__text{
+                margin-top: 1.8rem;
+                gap: 2.9rem;
+                .footer__descr{
+                    width: 100%;
+                    font-size: 2rem;
+                }
+                .footer__contacts{
+                    width: 100%;
+                    gap: none;
+                    justify-content: space-between;
+                    .footer__button{
+                        width: 14.7rem;
+                        font-size: 1.6rem;
+                    }
+                    .footer__plane-wrapper{
+                        left: 13rem;
+                        top: 13rem;
+                        width: 20.9rem;
+                        height: 11.7rem;
+                        .footer__plane{
+                            width: 11.4rem;
+                            height: 10rem;
+                        }
+                        .footer__plane-tracer{
+                            width: 15.5rem;
+                            height: 9.9rem;
+                        }
+                    }
+                }
+            }
+            .footer__bottom{
+                margin-top: 9.6rem;
+                height: auto;
+                flex-direction: column;
+                align-items: start;
+                gap: 0.6rem;
+                .footer__delimeter{
+                    display: none;
+                }
+            }
+        }
     }
 }
