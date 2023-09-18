@@ -15,6 +15,11 @@
     display: block;
 }
 
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+
 @import 'base/*.scss';
 @import 'global/*.scss';
 @import '**/_*.scss';
