@@ -94,8 +94,8 @@ const changeClassAfterResize = (screenWidth, elem, removedClasses, addedClass) =
 
 
 
-    addParallax(plane,0, 0, 0.25, 0.5, 0, 0, -47, false);
-    addParallax(promoTracer,0, 0, 0.25, 0.5, 0, 0, -47, false);
+    addParallax(plane,0, 0, 0.5, 1, 0, 0, -47, false);
+    addParallax(promoTracer,0, 0, 0.5, 1, 0, 0, -47, false);
     addParallax(parallaxPhones, 0, 0, 0.3, 0.15, 30, 39, -49.5, true);
 
     changeSlide(createShopSwitchesList, createShopSlides, 'show', 'create-shop__active');
